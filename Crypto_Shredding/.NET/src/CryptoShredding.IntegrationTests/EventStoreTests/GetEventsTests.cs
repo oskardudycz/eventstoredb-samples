@@ -15,21 +15,21 @@ namespace CryptoShredding.IntegrationTests.EventStoreTests;
 
 public static class GetEventsTests
 {
-    public class ContactAdded: IEvent
-    {
-        public Guid AggregateId { get; set; }
-        
-        [DataSubjectId]
-        public Guid PersonId { get; set; }
+public class ContactAdded: IEvent
+{
+    public Guid AggregateId { get; set; }
+    
+    [DataSubjectId]
+    public Guid PersonId { get; set; }
 
-        [PersonalData]
-        public string Name { get; set; }
+    [PersonalData]
+    public string Name { get; set; }
 
-        [PersonalData]
-        public DateTime Birthday { get; set; }
+    [PersonalData]
+    public DateTime Birthday { get; set; }
 
-        public Address Address { get; set; } = new Address();
-    }
+    public Address Address { get; set; } = new Address();
+}
 
     public class Address
     {
